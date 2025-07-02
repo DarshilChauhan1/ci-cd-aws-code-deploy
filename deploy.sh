@@ -1,0 +1,1 @@
+scp -i "darshil-admin.pem" -r './src' ubuntu@ec2-98-84-125-124/home/ubuntu/app
