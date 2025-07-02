@@ -12,6 +12,12 @@ if ! command -v pm2 >/dev/null 2>&1; then
     sudo npm install -g pm2
 fi
 
+# Install nest global dependencies
+if ! command -v nest >/dev/null 2>&1; then
+    echo "Installing Nest CLI globally..."
+    sudo npm install -g @nestjs/cli
+fi
+
 # Stop any existing instance of the app
 APP_NAME="my-app"
 
