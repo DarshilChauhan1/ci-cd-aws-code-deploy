@@ -4,7 +4,7 @@ import { SwaggerModule } from '@nestjs/swagger';
 import { swaggerConfig } from './swagger.config';
 
 async function bootstrap() {
-  console.log('Starting NestJS application...');
+  console.log('Starting NestJS application...  ');
   const app = await NestFactory.create(AppModule);
   const document = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup('api', app, document);
