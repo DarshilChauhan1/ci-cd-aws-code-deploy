@@ -4,6 +4,10 @@ set -e  # Exit on any error
 
 echo "Running install.sh..."
 
+# Ensure ubuntu owns the app files
+sudo chown -R ubuntu:ubuntu /home/ubuntu/app
+
+
 # Update apt-get if not recently updated
 if [ ! -f /var/log/apt-update-timestamp ]; then
     echo "Running apt-get update..."
